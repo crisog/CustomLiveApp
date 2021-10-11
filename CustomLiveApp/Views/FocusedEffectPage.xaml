@@ -2,8 +2,14 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="CustomLiveApp.Views.FocusedEffectPage">
+    xmlns:effects="clr-namespace:CustomLiveApp.Effects"
+    x:Class="CustomLiveApp.Views.FocusedEffectPage"
+    Title="Focused Effect">
     <ContentPage.Content>
-        <Label Text="Focused Effect!"></Label>
+        <Entry Text="Effect attached to an Entry" VerticalOptions="CenterAndExpand">
+        <Entry.Effects>
+            <effects:FocusEffect />
+            </Entry.Effects>
+        </Entry>
     </ContentPage.Content>
 </ContentPage>
