@@ -8,9 +8,9 @@
             <Label Text="Welcome to the Live Exercise App!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Button Text="Dependency Service (device orientation)" Command="{Binding DependencyServiceCommand}"/>
-        <Button Text="Custom Renderer (change bg color)"/>
-        <Button Text="Focused effects"/>
-        <Button Text="Platform specifics.."/>
+        <Button Text="Custom Renderer (change bg color)" Command="{Binding CustomRenderCommand}"/>
+        <Button Text="Focused effects" Command="{Binding FocusedEffectCommand}"/>
+        <Button Text="Platform specifics.." Command="{Binding PlatformSpecificCommand}"/>
     </StackLayout>
 
 </ContentPage>

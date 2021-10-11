@@ -2,8 +2,9 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="CustomLiveApp.Views.CustomRenderPage">
-    <ContentPage.Content>
-        <Label Text="Custom Render!"></Label>
-    </ContentPage.Content>
+    x:Class="CustomLiveApp.Views.CustomRenderPage"
+    xmlns:local="clr-namespace:CustomLiveApp.Models"
+    Title="Custom Render"
+    >
+    <local:CustomEntry Text="In Shared Code" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 </ContentPage>
