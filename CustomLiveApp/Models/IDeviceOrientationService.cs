@@ -5,7 +5,7 @@ namespace CustomLiveApp.Models
 {
     public interface IDeviceOrientationService
     {
-        DeviceOrientation GetOrientation();
+        Orientation GetOrientation();
     }
 
 }

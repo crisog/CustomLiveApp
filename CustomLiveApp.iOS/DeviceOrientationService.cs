@@ -9,13 +9,21 @@ namespace CustomLiveApp.iOS
 {
     public class DeviceOrientationService : IDeviceOrientationService
     {
-        public DeviceOrientation GetOrientation()
+        public Orientation GetOrientation()
         {
-            UIInterfaceOrientation orientation = UIApplication.SharedApplication.StatusBarOrientation;
-
-            bool isPortrait = orientation == UIInterfaceOrientation.Portrait ||
-                orientation == UIInterfaceOrientation.PortraitUpsideDown;
-            return isPortrait ? DeviceOrientation.Portrait : DeviceOrientation.Landscape;
+            switch (UIDevice.CurrentDevice.Orientation)
+            {
+                case UIDeviceOrientation.LandscapeLeft:
+                    return Orientation.LandscapeLeft;
+                case UIDeviceOrientation.LandscapeRight:
+                    return Orientation.LandscapeRight;
+                case UIDeviceOrientation.Portrait:
+                    return Orientation.PortraitUp;
+                case UIDeviceOrientation.PortraitUpsideDown:
+                    return Orientation.PortraitDown;
+                default:
+                    return Orientation.None;
+            }
         }
     }
 }
