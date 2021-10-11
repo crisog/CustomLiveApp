@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace CustomLiveApp.Views
 {
-    public partial class PlatformSpecificPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PlatformSpecificPage : TabbedPage
     {
         public PlatformSpecificPage()
         {

@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
+<TabbedPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="CustomLiveApp.Views.PlatformSpecificPage">
-    <ContentPage.Content>
-        <Label Text="Platform Specific!"></Label>
-    </ContentPage.Content>
-</ContentPage>
+    x:Class="CustomLiveApp.Views.PlatformSpecificPage"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    android:TabbedPage.BarItemColor="Black"
+    android:TabbedPage.BarSelectedItemColor="Black"
+    Title="Platform Specifics (android only)"
+    >
+
+    <TabbedPage.Children>
+        <ContentPage Title="Money Tab">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Android-specific button, with default padding/shadow." HorizontalOptions="CenterAndExpand"/>
+                <Button
+                    android:Button.UseDefaultPadding="True"
+                    android:Button.UseDefaultShadow="True"
+                    Text="Hello Moto :)"/>
+                <Label Margin="20" Text="Also, a default specific setting for android to set the tabbed page toolbar bottom." HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ContentPage>
+        <ContentPage Title="Chill Tab" />
+        <ContentPage Title="Food Tab" />
+    </TabbedPage.Children>
+</TabbedPage>

@@ -6,6 +6,7 @@
     x:Class="CustomLiveApp.Views.FocusedEffectPage"
     Title="Focused Effect">
     <ContentPage.Content>
+        
         <Entry Text="Effect attached to an Entry" VerticalOptions="CenterAndExpand">
         <Entry.Effects>
             <effects:FocusEffect />
