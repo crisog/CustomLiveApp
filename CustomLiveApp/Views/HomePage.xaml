@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CustomLiveApp.MainPage">
+             x:Class="CustomLiveApp.Views.HomePage">
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to the Live Exercise App!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Button Text="Dependency Service (device orientation)"/>
+        <Button Text="Dependency Service (device orientation)" Command="{Binding DependencyServiceCommand}"/>
         <Button Text="Custom Renderer (change bg color)"/>
         <Button Text="Focused effects"/>
         <Button Text="Platform specifics.."/>
